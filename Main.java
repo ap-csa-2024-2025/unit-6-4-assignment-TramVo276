@@ -10,7 +10,7 @@ public class Main
 
   public static int countLength(String[] arr, int targetLength)
   {
-    int = 0 ;
+    int count = 0 ;
     for (int i = 0; i < arr.length; i++)
     {
       String elem = arr[i];
@@ -43,15 +43,47 @@ public class Main
   {
     for (int i = 0; i < arr.length; i++)
     {
-      
+      int target = arr[i];
+      for (int j = i+1; j < arr.length; j++)
+      {
+        int elem = arr[j]
+        if(target == elem && i != j)
+        return true;
+      }
     }
-    
+    return false
     
   }
 
   public static String findMode(String[] arr)
   {
-    // replace with your code
+    int count = 0;
+    int mode = arr[0];
+    int max_count = 0;
+    for (int i = 0; i < arr.length; i++)
+    {
+      // counting alrigothm 
+      String target = arr[i];
+      count = 0;
+      for (int j = 0; j < arr.length; j++)
+      {
+        if (arr[j].equals(target))
+        {
+          count++;
+        }
+        // finding the max
+        if (count > max_count)
+        {
+          max_count = count;
+          mode = arr[i]
+        }
+
+      }
+
+
+      
+    }
     return null;
   }
-}
+
+
